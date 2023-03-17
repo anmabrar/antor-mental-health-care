@@ -3,7 +3,7 @@ import chair from '../../../assets/images/chair.png';
 import { DayPicker } from 'react-day-picker';
 import { format } from 'date-fns';
 
-const AppointmentBanner = ({ selectedData, setSelectedData }) => {
+const AppointmentBanner = ({ selectedDate, setSelectedDate }) => {
     return (
         <header className='my-6'>
             <div className="hero">
@@ -12,10 +12,10 @@ const AppointmentBanner = ({ selectedData, setSelectedData }) => {
                     <div className='mr-6 text-center'>
                         <DayPicker
                             mode="single"
-                            selected={selectedData}
-                            onSelect={setSelectedData}
+                            selected={selectedDate}
+                            onSelect={setSelectedDate}
                         />
-                        <p>You have selected date: {format(selectedData, 'PP')}</p>
+                        <p>You have selected date: {format(selectedDate, 'PP')}</p>
                     </div>
                 </div>
             </div>
