@@ -1,51 +1,72 @@
 [
     {
-      "name": "Teeth Orthodontics",
+      "name": "Counseling for Everyone",
       "slots": [
-        "08.00 AM - 08.30 AM",
-        "08.30 AM - 09.00 AM",
-        "09.00 AM - 9.30 AM",
+        "09.00 AM - 09.30 AM",
+        "09.30 AM - 10.00 AM",
+        "10.00 AM - 10.30 AM",
+        "10.30 AM - 11.00 AM",
+        "11.00 AM - 11.30 AM",
+        "11.30 AM - 12.00 PM",
+        "12.00 PM - 12.30 PM",
+        "12.30 PM - 01.00 PM"
+      ]
+    },
+    {
+      "name": "Child Development",
+      "slots": [
+        "09.00 AM - 09.30 AM",
+        "09.30 AM - 10.00 AM",
+        "10.00 AM - 10.30 AM",
+        "10.30 AM - 11.00 AM",
+        "11.00 AM - 11.30 AM",
+        "11.30 AM - 12.00 PM"
+      ]
+    },
+    {
+      "name": "Anger Management",
+      "slots": [
+        "09.00 AM - 09.30 AM",
+        "09.30 AM - 10.00 AM",
+        "10.00 AM - 10.30 AM",
+        "10.30 AM - 11.00 AM",
+        "11.00 AM - 11.30 AM",
+        "11.30 AM - 12.00 PM",
+        "12.00 PM - 12.30 PM",
+        "12.30 PM - 01.00 PM"
+      
+      ]
+    },
+    {
+      "name": "Develop Your Personality",
+      "slots": [
+        "09.00 AM - 09.30 AM",
+        "09.30 AM - 10.00 AM",
+        "10.00 AM - 10.30 AM",
+        "10.30 AM - 11.00 AM",
+        "11.00 AM - 11.30 AM",
+        "11.30 AM - 12.00 PM",
+        "12.00 PM - 12.30 PM",
+        "12.30 PM - 01.00 PM"
+      ]
+    },
+    {
+      "name": "Understanding & Overcoming Depression",
+      "slots": [
+        "09.00 AM - 09.30 AM",
         "09.30 AM - 10.00 AM",
         "10.00 AM - 10.30 AM",
         "10.30 AM - 11.00 AM"
       ]
     },
     {
-      "name": "Cosmetic Dentistry",
+      "name": "Overcoming Trauma",
       "slots": [
-        "09.00 AM - 9.30 AM",
+        "09.00 AM - 09.30 AM",
         "09.30 AM - 10.00 AM",
         "10.00 AM - 10.30 AM",
         "10.30 AM - 11.00 AM"
-      ]
-    },
-    {
-      "name": "Teeth Cleaning",
-      "slots": []
-    },
-    {
-      "name": "Cavity Protection",
-      "slots": [
-        "10.00 AM - 10.30 AM",
-        "10.30 AM - 11.00 AM"
-      ]
-    },
-    {
-      "name": "Pediatric Dental",
-      "slots": [
-        "08.30 AM - 09.00 AM",
-        "09.00 AM - 9.30 AM",
-        "09.30 AM - 10.00 AM",
-        "10.00 AM - 10.30 AM",
-        "10.30 AM - 11.00 AM"
-      ]
-    },
-    {
-      "name": "Oral Surgery",
-      "slots": [
-        "09.30 AM - 10.00 AM",
-        "10.00 AM - 10.30 AM",
-        "10.30 AM - 11.00 AM"
+        
       ]
     }
   ]

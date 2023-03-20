@@ -38,7 +38,7 @@ const SignUp = () => {
     return (
         <div className='h-[800px] flex justify-center items-center'>
             <div className='w-96 p-6'>
-                <h2 className='text-xl text-center'>Sign Up</h2>
+                <h2 className='text-2xl text-center'>Sign Up</h2>
                 <form onSubmit={handleSubmit(handleSignUp)}>
                     <div className="form-control w-full max-w-xs">
                         <label className="label"><span className="label-text">Name</span></label>
@@ -74,7 +74,7 @@ const SignUp = () => {
                 </form>
                 <p>Already have an account? <Link className='text-info' to="/Login">Please login</Link></p>
                 <div className="divider">OR</div>
-                <button className='btn btn-info w-full'>CONTINUE WITH GOOGLE</button>
+                <button className='btn text-white btn-info w-full'>CONTINUE WITH GOOGLE</button>
             </div>
         </div>
     );
