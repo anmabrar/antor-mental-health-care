@@ -1,15 +1,15 @@
 import React from 'react';
-import chair from'../../../assets/images/chair.png'
+import banner from '../../../assets/images/mental-health.png'
 import PrimaryButton from '../../../components/PrimaryButton/PrimaryButton';
 
 const Banner = () => {
     return (
-        <div className="hero bg-base-200">
+        <div className="hero bg-cyan-50">
             <div className="hero-content flex-col lg:flex-row-reverse">
-                <img src={chair} className="rounded-lg lg:w-1/2 shadow-2xl" alt='' />
+                <img src={banner} className="rounded-lg lg:w-1/2 shadow-2xl" alt='' />
                 <div>
-                    <h1 className="text-5xl font-bold">Box Office News!</h1>
-                    <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                    <h1 className="text-5xl font-bold">Antor Mental Health Care</h1>
+                    <p className="py-6">Antor strives to serve health care services locally and globally. Its goal is to be easily accessible to everyone who needs health support, be it mental or physical. Moreover, it really wants to educate people about mental health, cure mental disorders, and achieve victory over mental illness.</p>
                     <PrimaryButton>Get Started</PrimaryButton>
                 </div>
             </div>

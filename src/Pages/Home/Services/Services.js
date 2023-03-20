@@ -1,28 +1,28 @@
 import React from 'react';
-import fluoride from '../../../assets/images/fluoride.png';
-import cavity from '../../../assets/images/cavity.png';
+import coaching from '../../../assets/images/Coaching.png';
+import child from '../../../assets/images/Child.png';
 import whitening from '../../../assets/images/whitening.png';
 import Service from '../Service/Service';
 
 
 const Services = () => {
-    const servicesData =[
+    const servicesData = [
         {
-            id:1,
-            name: 'Fluoride Treatment',
-            description:'Lorem Ipsum is simply dummy printing and typesetting indust Ipsum has been the',
-            img: fluoride
+            id: 1,
+            name: 'Professional Coaching and Mentorship',
+            description: 'Antor is now offering professional counseling and guidance service for individuals seeking career growth and success. ',
+            img: coaching
         },
         {
-            id:2,
-            name: 'Fluoride Treatment',
-            description:'Lorem Ipsum is simply dummy printing and typesetting indust Ipsum has been the',
-            img: cavity
+            id: 2,
+            name: 'Child Development',
+            description: 'Antor can provide the best solution in the path of child development and the IQ Test for children.',
+            img: child
         },
         {
-            id:3,
-            name: 'Fluoride Treatment',
-            description:'Lorem Ipsum is simply dummy printing and typesetting indust Ipsum has been the',
+            id: 3,
+            name: 'Anger Management',
+            description: 'Anger management is a psycho-therapeutic program for anger prevention and control. It has been described as deploying anger successfully.',
             img: whitening
         }
     ]
@@ -36,8 +36,8 @@ const Services = () => {
             <div className='grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
                 {
                     servicesData.map(service => <Service
-                        key = {service.id}
-                        service = {service}
+                        key={service.id}
+                        service={service}
                     ></Service>)
                 }
             </div>

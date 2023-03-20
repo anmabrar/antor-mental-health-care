@@ -10,21 +10,21 @@ const InfoCards = () => {
         {
             id: 1,
             name: 'Opening Hour',
-            discription:'Open 9.00am to 5.00pm everyday.',
+            description:'Open 9.00am to 5.00pm everyday.',
             icon: clock,
             bgColor: 'bg-info'
         },
         {
             id: 2,
             name: 'Our location',
-            discription:'Open 9.00am to 5.00pm everyday.',
+            description:'Green Road, Dhaka',
             icon: marker,
             bgColor: 'bg-info'
         },
         {
             id: 3,
             name: 'Contact Us',
-            discription:'Open 9.00am to 5.00pm everyday.',
+            description:'01521332925',
             icon: phone,
             bgColor: 'bg-info'
         },

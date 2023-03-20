@@ -13,21 +13,21 @@ const Testimonial = () => {
             name: 'Sakib Al Hasan',
             photo:people1,
             location:'Dhaka',
-            review:'It is a long established fact that by the readable content of a lot layout. The point of using Lorem a more-or-less normal distribu to using Content here, content'
+            review:'I am very thankful to this hospital and Dr Khan for curing my father\'s health problem with his skillful treatment. I really appreciate all the doctors and nursing staff for their commitment.'
         },
         {
             id:2,
-            name: 'Sakib Al Hasan',
+            name: 'Sadia Khan',
             photo:people2,
             location:'Dhaka',
-            review:'It is a long established fact that by the readable content of a lot layout. The point of using Lorem a more-or-less normal distribu to using Content here, content'
+            review:'I am very thankful to this hospital and Dr Khan for curing my father\'s health problem with his skillful treatment. I really appreciate all the doctors and nursing staff for their commitment.'
         },
         {
             id:3,
-            name: 'Sakib Al Hasan',
+            name: 'Nadia Mim',
             photo:people3,
             location:'Dhaka',
-            review:'It is a long established fact that by the readable content of a lot layout. The point of using Lorem a more-or-less normal distribu to using Content here, content'
+            review:'I am very thankful to this hospital and Dr Khan for curing my father\'s health problem with his skillful treatment. I really appreciate all the doctors and nursing staff for their commitment.'
         },
     ]
 
