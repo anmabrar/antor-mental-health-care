@@ -25,7 +25,7 @@ const BookingModal = ({ treatment, setTreatment, selectedDate, refetch }) => {
       phone
     }
 
-    fetch('https://antor-server.vercel.app/bookings', {
+    fetch('http://localhost:5000/bookings', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'
@@ -40,7 +40,7 @@ const BookingModal = ({ treatment, setTreatment, selectedDate, refetch }) => {
           toast.success('Booking confirmed')
           refetch();
         }
-        else{
+        else {
           toast.error(data.message);
         }
       })
@@ -49,7 +49,6 @@ const BookingModal = ({ treatment, setTreatment, selectedDate, refetch }) => {
   }
   return (
     <>
-      {/* Put this part before </body> tag */}
       <input type="checkbox" id="booking-modal" className="modal-toggle" />
       <div className="modal">
         <div className="modal-box relative">

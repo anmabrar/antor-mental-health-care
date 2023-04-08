@@ -1,13 +1,14 @@
 import React, { useContext } from 'react';
 import { useQuery } from 'react-query';
 import { AuthContext } from '../../../Contexts/AuthProvider';
+import Loading from '../../Shared/Loading/Loading';
 
 const MyAppointment = () => {
     const { user } = useContext(AuthContext);
 
-    const url = `https://antor-server.vercel.app/bookings?email=${user?.email}`;
+    const url = `http://localhost:5000/bookings?email=${user?.email}`;
 
-    const { data: bookings = [] } = useQuery({
+    const { data: bookings = [], isLoading } = useQuery({
         queryKey: ['bookings', user?.email],
         queryFn: async () => {
             const res = await fetch(url, {
@@ -20,6 +21,10 @@ const MyAppointment = () => {
         }
     })
 
+    if(isLoading){
+        return <Loading></Loading>
+    }
+    
     return (
         <div>
             <h3 className='text-3xl mb-5'>My Appointments</h3>
@@ -37,7 +42,7 @@ const MyAppointment = () => {
                     </thead>
                     <tbody>
                         {
-                            bookings.map((booking, i) => <tr key={booking._id}>
+                           bookings && bookings?.map((booking, i) => <tr key={booking._id}>
                                 <th>{i + 1}</th>
                                 <td>{booking.patient}</td>
                                 <td>{booking.treatment}</td>
