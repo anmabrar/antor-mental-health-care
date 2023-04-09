@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { useQuery } from 'react-query';
 import { AuthContext } from '../../../Contexts/AuthProvider';
 import Loading from '../../Shared/Loading/Loading';
+import { Link } from 'react-router-dom';
 
 const MyAppointment = () => {
     const { user } = useContext(AuthContext);
@@ -21,10 +22,10 @@ const MyAppointment = () => {
         }
     })
 
-    if(isLoading){
+    if (isLoading) {
         return <Loading></Loading>
     }
-    
+
     return (
         <div>
             <h3 className='text-3xl mb-5'>My Appointments</h3>
@@ -38,16 +39,29 @@ const MyAppointment = () => {
                             <th>Treatment</th>
                             <th>Date</th>
                             <th>Time</th>
+                            <th>Payment</th>
                         </tr>
                     </thead>
                     <tbody>
                         {
-                           bookings && bookings?.map((booking, i) => <tr key={booking._id}>
+                            bookings && bookings?.map((booking, i) => <tr key={booking._id}>
                                 <th>{i + 1}</th>
                                 <td>{booking.patient}</td>
                                 <td>{booking.treatment}</td>
                                 <td>{booking.appointmentDate}</td>
                                 <td>{booking.slot}</td>
+                                <td>
+                                    {
+                                        booking.price && !booking.paid &&
+                                        <Link to={`/dashboard/Payment/${booking._id}`}>
+                                            <button className='btn btn-sm btn-info'>Pay</button>
+                                        </Link>
+                                    }
+                                    {
+                                        booking.price && booking.paid &&
+                                        <span className='text-green-500 font-bold'>Paid</span>
+                                    }
+                                </td>
                             </tr>)
                         }
                     </tbody>
