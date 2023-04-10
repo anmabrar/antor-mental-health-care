@@ -96,11 +96,11 @@ const SignUp = () => {
                     {
                         singUpError && <p className='text-red-600'>{singUpError}</p>
                     }
-                    <input className='btn btn-success mt-4 w-full' type="submit" />
+                    <input className='btn btn-primary mt-4 w-full' type="submit" />
                 </form>
                 <p>Already have an account? <Link className='text-info' to="/Login">Please login</Link></p>
-                <div className="divider">OR</div>
-                <button className='btn text-white btn-info w-full'>CONTINUE WITH GOOGLE</button>
+                {/* <div className="divider">OR</div>
+                <button className='btn text-white btn-secondary w-full'>CONTINUE WITH GOOGLE</button> */}
             </div>
         </div>
     );

@@ -12,24 +12,40 @@ const AllUsers = () => {
         }
     });
 
-  
 
-    const handleMakeAdmin = id =>{
-        fetch(`http://localhost:5000/users/admin/${id}`,{
+
+    const handleMakeAdmin = id => {
+        fetch(`http://localhost:5000/users/admin/${id}`, {
             method: 'PUT',
             headers: {
                 authorization: `bearer ${localStorage.getItem('accessToken')}`
             }
         })
-        .then(res => res.json())
-        .then(data => {
-            console.log(data)
-            if(data.modifiedCount > 0){
-                toast.success('Make admin successful');
-                refetch();
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if (data.modifiedCount > 0) {
+                    toast.success('Make admin successful');
+                    refetch();
+                }
+            })
+
+    }
+
+    const handleDeleteUser = user => {
+        fetch(`http://localhost:5000/users/admin/${user._id}`, {
+            method: 'DELETE',
+            headers: {
+                authorization: `bearer ${localStorage.getItem('accessToken')}`
             }
         })
-    
+            .then(res => res.json())
+            .then(data => {
+                if (data.deletedCount > 0) {
+                    refetch();
+                    toast.success(`${user.name}'s profile deleted successfully`)
+                }
+            })
     }
     return (
         <div>
@@ -43,7 +59,7 @@ const AllUsers = () => {
                             <th>No.</th>
                             <th>Name</th>
                             <th>Email</th>
-                            <th>Admin</th>
+                            <th>Role</th>
                             <th>Delete</th>
                         </tr>
                     </thead>
@@ -53,9 +69,15 @@ const AllUsers = () => {
                                 <th>{i + 1}</th>
                                 <td>{user.name}</td>
                                 <td>{user.email}</td>
-                                <td>{ user?.role !=='admin' && <button onClick={()=>handleMakeAdmin(user._id)} className='btn btn-xs btn-info'> Make Admin</button>}</td>
-                                <td><button className='btn btn-xs btn-info'>Delete</button></td>
-                               
+                                <td>
+                                    {
+                                        user?.role !== 'admin'?
+                                        <button onClick={() => handleMakeAdmin(user._id)} className='btn btn-xs btn-info'> Make Admin</button> :
+                                         <button className='btn btn-xs btn-secondary'>Admin</button>
+                                    }
+                                </td>
+                                <td><button onClick={() => handleDeleteUser(user)} className='btn btn-xs btn-info'>Delete</button></td>
+
                             </tr>)
                         }
                     </tbody>

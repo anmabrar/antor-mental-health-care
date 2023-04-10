@@ -16,11 +16,15 @@ const Login = () => {
     const location = useLocation();
     const navigate = useNavigate();
 
+
+
     const from = location.state?.form?.pathname || '/';
 
     if(token){
         navigate(from, { replace: true });
     }
+
+
 
     const handleLogin = (data) => {
         console.log(data);
@@ -68,12 +72,12 @@ const Login = () => {
                             loginError && <p className='text-red-600'>{loginError}</p>
                         }
                     </div>
-                    <input className='btn btn-success mt-4 w-full' type="submit" />
+                    <input className='btn btn-primary mt-4 w-full' type="submit" />
 
                 </form>
                 <p>New to Doctors Portal? <Link className='text-info' to="/signup">Create new account</Link></p>
-                <div className="divider">OR</div>
-                <button className='btn text-white btn-info w-full'>CONTINUE WITH GOOGLE</button>
+                {/* <div className="divider">OR</div>
+                <button onClick={handleGoogleLogin} className='btn text-white btn-secondary w-full'>CONTINUE WITH GOOGLE</button> */}
             </div>
         </div>
     );

@@ -14,6 +14,7 @@ import AddDoctor from "../../Pages/Dashboard/AddDoctor/AddDoctor";
 import ManageDoctors from "../../Pages/Dashboard/ManageDoctors/ManageDoctors";
 import Payment from "../../Pages/Dashboard/Payment/Payment";
 import DisplayError from "../../Pages/Shared/DisplayError/DisplayError";
+import Doctor from "../../Pages/Doctor/Doctor";
 
 
 export const router = createBrowserRouter([
@@ -36,12 +37,13 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/appointment',
-                element: <Appointment></Appointment>
+                element: <PrivateRoute> <Appointment></Appointment> </PrivateRoute>
             },
             {
                 path: '/about',
                 element: <About></About>
             }
+          
         ]
     },
     {
@@ -53,6 +55,10 @@ export const router = createBrowserRouter([
             {
                 path: '/dashboard',
                 element: <MyAppointment></MyAppointment>
+            },
+            {
+                path: '/dashboard/doctor',
+                element: <Doctor></Doctor>
             },
             {
                 path: '/dashboard/allusers',
